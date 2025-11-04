@@ -1,17 +1,6 @@
 <?php 
 require_once "../layouts/header.php";
 ?>
-<body>
-  <div class="sidebar" id="sidebar">
-    <button class="toggle-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
-    <h4 class="text-center text-white mb-4"><i class="fas fa-tachometer-alt me-2"></i> <span class="sidebar-title">پنل ادمین</span></h4>
-    <a href="index.html"><i class="fas fa-home me-2"></i> <span>صفحه اصلی</span></a>
-    <a href="settings.html"><i class="fas fa-cog me-2"></i> <span>تنظیمات</span></a>
-    <a href="tables.html"><i class="fas fa-table me-2"></i> <span>جدول‌ها</span></a>
-    <a href="profile.html"><i class="fas fa-user me-2"></i> <span>پروفایل</span></a>
-    <a href="forms.html"><i class="fas fa-file-alt me-2"></i> <span>فرم‌ها</span></a>
-    <a href="#"><i class="fas fa-sign-out-alt me-2"></i> <span>خروج</span></a>
-  </div>
 
   <div class="content" id="content">
     <div class="header d-flex justify-content-between align-items-center mb-4">
@@ -84,7 +73,7 @@ require_once "../layouts/header.php";
       </div>
     </div>
   </div>
-</body>
+
 
 
 <?php 
