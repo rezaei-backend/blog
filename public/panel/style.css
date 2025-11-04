@@ -1,0 +1,148 @@
+body {
+    background-color: #ffffff;
+    font-family: 'Vazirmatn', sans-serif;
+    color: #2c3e50;
+  }
+
+html {
+    background: #f7f7f7;
+}
+  
+  .sidebar {
+    height: 100vh;
+    background: linear-gradient(180deg, #a3bffa, #74c0fc);
+    padding-top: 20px;
+    position: fixed;
+    width: 250px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    border-left: 1px solid #f7f7f7;
+  }
+  
+  .sidebar.collapsed {
+    width: 70px;
+  }
+  
+  .sidebar .toggle-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .sidebar h4 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar a {
+    color: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .sidebar span {
+    display: inline-block;
+    transition: opacity 0.2s;
+  }
+  
+  .sidebar.collapsed span {
+    opacity: 0;
+    width: 0;
+  }
+  
+  .content {
+    margin-right: 250px;
+    padding: 20px;
+    transition: margin-right 0.3s ease;
+    background-color: #f7f7f7;
+  }
+  
+  .content.collapsed {
+    margin-right: 70px;
+  }
+  
+  .header {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .card {
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: none;
+    background: #ffffff;
+  }
+  
+  .btn-primary {
+    background-color: #74c0fc;
+    border-color: #74c0fc;
+    color: #ffffff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #a3bffa;
+    border-color: #a3bffa;
+  }
+  
+  .dropdown-menu {
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+  
+  .notification-list {
+    max-height: 300px;
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 10px;
+  }
+  
+  .notification-list .dropdown-item {
+    border-radius: 8px;
+    margin-bottom: 5px;
+  }
+  
+  .table th, .table td {
+    vertical-align: middle;
+  }
+  
+  .badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+  
+  .text-primary {
+    color: #74c0fc !important;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 70px;
+    }
+    .sidebar span {
+      opacity: 0;
+      width: 0;
+    }
+    .content {
+      margin-right: 70px;
+    }
+  }
