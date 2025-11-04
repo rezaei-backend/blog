@@ -55,7 +55,7 @@ $categories = $conn->query("SELECT * FROM `categories`")->fetchAll();
             <td>
               <a href="create-table.html" class="text-primary me-2"><i class="fas fa-eye"></i></a>
               <a href="<?=url_get("view/admin/category/updatecategory.php" , $category['id']) ?>" class="text-warning me-2"><i class="fas fa-pencil-alt"></i></a>
-              <a href="#" class="text-danger" onclick="confirmDelete()"><i class="fas fa-trash"></i></a>
+              <a href="<?=url_get("controller/category/deletecategory.php" , $category['id']) ?>" class="text-danger"><i class="fas fa-trash"></i></a>
             </td>
           </tr>
 
