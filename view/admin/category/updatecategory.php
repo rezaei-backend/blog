@@ -1,7 +1,7 @@
 <?php
 require_once "../layouts/header.php";
-
-$categories = $conn->query("SELECT * FROM `categories`")->fetchAll();
+$id=$_GET['id'];
+$category = $conn->query("SELECT * FROM `categories` WHERE id='$id' ")->fetch();
 ?>
 <div class="content" id="content">
   <div class="header d-flex justify-content-between align-items-center mb-4">
@@ -32,47 +32,14 @@ $categories = $conn->query("SELECT * FROM `categories`")->fetchAll();
       <span class="input-group-text"><i class="fas fa-search"></i></span>
     </div>
   </div>
-  <div class="card p-4">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-      <h5><i class="fas fa-table me-2 text-primary"></i> جدول کاربران</h5>
-      <a href="create-table.html" class="btn btn-primary">ساخت دسته بندی جدید </a>
-    </div>
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>عنوان</th>
-          <th>عملیات</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php
-        foreach ($categories as $category) {
-        ?>
-          <tr>
-            <td><?= $category['id'] ?></td>
-            <td><?= $category['title'] ?></td>
-            <td>
-              <a href="create-table.html" class="text-primary me-2"><i class="fas fa-eye"></i></a>
-              <a href="<?=url_get("view/admin/category/updatecategory.php" , $category['id']) ?>" class="text-warning me-2"><i class="fas fa-pencil-alt"></i></a>
-              <a href="#" class="text-danger" onclick="confirmDelete()"><i class="fas fa-trash"></i></a>
-            </td>
-          </tr>
-
-        <?php
-        }
-        ?>
-      </tbody>
-    </table>
-  </div>
     <div class="card p-4">
-      <h5><i class="fas fa-file-alt me-2 text-primary"></i> افزودن دسته بندی</h5>
-      <form action="<?=url("controller/category/insertcategory.php") ?>" method="post">
+      <h5><i class="fas fa-file-alt me-2 text-primary"></i> ویرایش دسته بندی</h5>
+      <form action="<?=url_get("controller/category/updatecategory.php" , $id) ?>" method="post">
         <div class="row">
           <!-- ورودی متنی -->
           <div class="col-md-6 mb-3">
             <label class="form-label">نام دسته بندی</label>
-            <input type="text" name="title" class="form-control" placeholder="نام دسته  را وارد کنید">
+            <input type="text" value="<?=$category['title'] ?>" name="title" class="form-control" placeholder="نام دسته  را وارد کنید">
           </div>
           
         </div>

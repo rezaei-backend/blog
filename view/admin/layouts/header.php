@@ -21,7 +21,7 @@ require_once "../../../functions/pdo.php";
     <button class="toggle-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
     <h4 class="text-center text-white mb-4"><i class="fas fa-tachometer-alt me-2"></i> <span class="sidebar-title">پنل ادمین</span></h4>
     <a href="index.html"><i class="fas fa-home me-2"></i> <span>صفحه اصلی</span></a>
-    <a href="<?=Url("view/admin/category/index.php") ?>"><i class="fas fa-cog me-2"></i> <span>دسته بندی</span></a>
+    <a href="<?=Url("view/admin/category/index.php")?>"><i class="fas fa-cog me-2"></i> <span>دسته بندی</span></a>
     <a href="tables.html"><i class="fas fa-table me-2"></i> <span>جدول‌ها</span></a>
     <a href="profile.html"><i class="fas fa-user me-2"></i> <span>پروفایل</span></a>
     <a href="forms.html"><i class="fas fa-file-alt me-2"></i> <span>فرم‌ها</span></a>
